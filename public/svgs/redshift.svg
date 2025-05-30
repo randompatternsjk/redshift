@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="288.37051mm"
+   height="21.234362mm"
+   viewBox="0 0 288.37051 21.234362"
+   version="1.1"
+   id="svg1"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1">
+    <rect
+       x="-21198.354"
+       y="-7296.3779"
+       width="40885.621"
+       height="5310.3818"
+       id="rect3-4" />
+  </defs>
+  <g
+     id="layer1"
+     transform="translate(5607.3379,1982.5312)">
+    <text
+       xml:space="preserve"
+       transform="matrix(0.26458333,0,0,0.26458333,1.4691417,-53.933664)"
+       id="text3-4"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:96px;font-family:'1790 Royal Printing Caps';-inkscape-font-specification:'1790 Royal Printing Caps';text-align:start;letter-spacing:70px;word-spacing:0px;writing-mode:lr-tb;direction:ltr;white-space:pre;shape-inside:url(#rect3-4);fill:#ffffff;fill-opacity:1"><tspan
+         x="-21198.354"
+         y="-7211.236"
+         id="tspan1">REDSHIFT</tspan></text>
+  </g>
+</svg>
