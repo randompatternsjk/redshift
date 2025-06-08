@@ -1,0 +1,28 @@
+---
+// filepath: /src/pages/lyrics/index.astro
+
+import { getCollection } from 'astro:content';
+
+// Fetch all lyrics posts, excluding "cover.mdx"
+const songs = (await getCollection('lyrics')).filter(song => song.slug !== 'cover').sort((a, b) => a.data.track - b.data.track);
+---
+
+<div class="max-w-screen mx-auto p-4">
+  <!-- Grid Container -->
+  <section class="grid grid-cols-1 md:grid-cols-3 gap-8 justify-evenly" style="padding: 5vw;">
+    {songs.map(song => (
+      <div class="flex flex-col items-center">
+        <!-- Image -->
+        <img src={song.data.image} alt={song.data.title} class="w-full h-auto object-cover rounded p-4" />
+        
+        <!-- Title -->
+        <h2 class="text-center font-bold text-xl mt-4">{song.data.title}</h2>
+        
+        <!-- Body Text -->
+        <div class="prose max-w-full text-justify columns-2 mt-4">
+          {song.body}
+        </div>
+      </div>
+    ))}
+  </section>
+</div>

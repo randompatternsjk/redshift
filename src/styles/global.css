@@ -2,7 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Custom styles */
 body {
   @apply text-gray-900;
+}
+
+.btn {
+  @apply bg-moonsilver/90 text-dark text-sm font-bold font-sans uppercase rounded-none hover:shadow-moonglow transition duration-300 px-4 py-2 m-1;
 }

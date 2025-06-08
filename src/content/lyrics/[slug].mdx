@@ -1,0 +1,42 @@
+---
+title: "Song Title"
+slug: "song-title"
+image: "/path/to/image.jpg"
+track: "0"
+---
+
+import ContentAPI from "@tryghost/content-api";
+
+// Initialize Ghost Content API
+const ghost = new ContentAPI({
+url: 'https://random-patterns.ghost.io',
+key: '5f212d672dd281bcf48c2b4e0f',
+version: 'v5.0',
+});
+
+// Fetch all slugs for lyrics posts
+export async function getStaticPaths() {
+const posts = await ghost.posts.browse({ filter: 'tag:lyrics', limit: 'all' });
+return posts.map((post) => ({
+params: { slug: post.slug },
+}));
+}
+
+// Fetch data for the specific slug
+const song = await ghost.posts.read({ slug: Astro.params.slug });
+
+<section class="w-screen h-screen grid grid-cols-1 md:grid-cols-2">
+  {/* Left Column: Lyrics */}
+  <div class="p-6 overflow-y-auto">
+    <h1 class="text-2xl font-bold mb-4">{song.title}</h1>
+    <div class="grid grid-cols-3 text-justify">
+      {song.html}   {/* Render Lyrics content */}
+    </div>
+  </div>
+
+{/* Right Column: featured image */}
+
+  <div class="flex justify-center items-center">
+    <img src={song.feature_image} alt={song.title} class="w-full h-auto object-cover rounded" />
+  </div>
+</section>

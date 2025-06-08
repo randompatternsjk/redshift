@@ -2,18 +2,20 @@
 // Nav.astro
 ---
 
-<section class="relative content-center">
-  // <div class="relative h-[4vw] flex flex-col justify-end max-w-lg min-w-lg mx-auto my-20">
-    <img
-      src="/svgs/theokaylakes.svg"
-      alt="The Okay Lakes Logo"
-      class="object-contain flex-1 mt-6 mb-3 mx-auto"
-    />
-    <img
-      src="/svgs/redshift.svg"
-      alt="Redshift Logo"
-      class="mx-auto mt-3 object-contain flex-1"
-    />
+<section class="w-screen bg-moonsilver/20 backdrop-blur-sm relative content-center">
+  <div class="right-6 top-12 justify-center flex p-2">
+    <button
+    onclick="window.open('https://listen.theokaylakes.com/redshift', '_blank', 'noopener,noreferrer')"
+    class="btn">
+  Listen</button>
+    
+
+    <button
+    onclick="window.open('/content/lyrics/', '_blank', 'noopener,noreferrer')"
+    class="btn">
+  Lyrics</button>
+    
+  </div>
 
   </div>
 </section>
