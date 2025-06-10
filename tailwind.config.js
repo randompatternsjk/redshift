@@ -10,7 +10,7 @@ module.exports = {
       },
       fontFamily: {
         sans: ["Inter", "sans-serif"],
-        garamond: ["Garamond", "serif"],
+        lyrics: ["Garamond", "serif"],
       },
       boxShadow: {
         moonglow: `
