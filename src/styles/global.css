@@ -11,5 +11,5 @@ lyrics .h1 {
 }
 
 .btn {
-  @apply bg-moonsilver/90 text-dark text-sm font-bold font-sans uppercase rounded-none hover:shadow-moonglow transition duration-300 px-4 py-2 m-1;
+  @apply text-dark text-sm font-black font-sans uppercase rounded-none hover:shadow-moonglow transition duration-300 px-4 py-2 m-1;
 }

@@ -1,11 +1,15 @@
 ---
 // MainLayout.astro
 import '../styles/global.css';
+import Nav from '../components/Nav.astro';
+import { ClientRouter } from 'astro:transitions';
 ---
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <ClientRouter />
+  <link rel="preload" href="/images/layout_bg.jpg" as="image">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Redshift - The Okay Lakes</title>
@@ -15,8 +19,24 @@ import '../styles/global.css';
     class="fixed inset-0 -z-10 bg-cover bg-center opacity-60"
     style="background-image: url('/images/layout_bg.jpg');"
   ></div>
+  <section class="relative content-center">
+    // <div class="relative flex flex-col justify-start max-w-md min-w-md mx-auto my-8">
+      <img
+        src="/svgs/theokaylakes.svg"
+        alt="The Okay Lakes Logo"
+        class="object-contain flex-1 mt-6 mb-3 mx-auto"
+      />
+      <img
+        src="/svgs/redshift.svg"
+        alt="Redshift Logo"
+        class="mx-auto mt-3 object-contain flex-1"
+      />
   
-  <main class="w-full mx-auto">
+    </div>
+</section>
+
+  <Nav />
+  <main class="w-full mx-auto items-start">
   
     <slot />
   </main>

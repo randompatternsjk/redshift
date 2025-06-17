@@ -1,26 +1,24 @@
 ---
-// Nav.astro
+const currentPath = Astro.url.pathname;
+export const hydrate = "load"; // Hydrate the Nav component on page load
 ---
 
-<section class="w-screen bg-dark/40 backdrop-blur-sm relative content-center">
-  <div class="right-6 top-12 justify-center flex p-2">
-    <button
-    onclick="window.open('https://listen.theokaylakes.com/redshift', '_blank', 'noopener,noreferrer')"
-    class="btn">
-  Listen</button>
-    
-
-    <button
-    onclick="window.open('/lyrics/', '_blank', 'noopener,noreferrer')"
-    class="btn">
-  Lyrics</button>
-
-  <button
-  onclick="window.open('/credits/', '_blank', 'noopener,noreferrer')"
-  class="btn">
-Credits</button>
-    
-  </div>
-
+<section class="w-screen relative content-center">
+  <div class="flex justify-center space-x-4 mb-16">
+    <a href="/" class={`btn ${currentPath === '/' ? 'underline' : ''}`}>Home</a>
+    <a href="/listen/" class={`btn ${currentPath === '/listen/' ? 'underline' : ''}`}>Listen</a>
+    <a href="/lyrics/" class={`btn ${currentPath === '/lyrics/' ? 'underline' : ''}`}>Lyrics</a>
+    <a href="/credits/" class={`btn ${currentPath === '/credits/' ? 'underline' : ''}`}>Credits</a>
   </div>
 </section>
+
+<style>
+  .btn {
+    @apply text-white text-sm font-bold uppercase px-4 py-2 transition;
+  }
+
+  .underline {
+    text-decoration: underline;
+    text-underline-offset: 4px; /* Adjust the offset as needed */
+  }
+</style>
