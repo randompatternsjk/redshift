@@ -1,0 +1,24 @@
+---
+import { ClientRouter } from "astro:transitions";
+import Nav from "./Nav.astro";
+---
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<meta name="generator" content={Astro.generator} />
+
+<Nav />
+<ClientRouter />
+
+<section class="content-center my-8">
+    <div class="flex flex-col justify-start max-w-md min-w-md mx-auto my-auto gap-4">
+        <img
+          src="/svgs/theokaylakes.svg"
+          alt="The Okay Lakes Logo"
+          class="object-contain flex-1 mx-auto"
+        />
+        <img
+          src="/svgs/redshift.svg"
+          alt="Redshift Logo"
+          class="mx-auto object-contain flex-1"
+        />
+    </div>
+</section>

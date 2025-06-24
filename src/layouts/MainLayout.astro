@@ -1,7 +1,6 @@
 ---
 // MainLayout.astro
 import '../styles/global.css';
-import Nav from '../components/Nav.astro';
 import { ClientRouter } from 'astro:transitions';
 ---
 
@@ -16,27 +15,11 @@ import { ClientRouter } from 'astro:transitions';
 </head>
 <body class="min-h-screen relative bg-black">
   <div 
-    class="fixed inset-0 -z-10 bg-cover bg-center opacity-60"
+    class="fixed inset-0 -z-10 bg-cover bg-center opacity-70"
     style="background-image: url('/images/layout_bg.jpg');"
   ></div>
-  <section class="relative content-center">
-    // <div class="relative flex flex-col justify-start max-w-md min-w-md mx-auto my-8">
-      <img
-        src="/svgs/theokaylakes.svg"
-        alt="The Okay Lakes Logo"
-        class="object-contain flex-1 mt-6 mb-3 mx-auto"
-      />
-      <img
-        src="/svgs/redshift.svg"
-        alt="Redshift Logo"
-        class="mx-auto mt-3 object-contain flex-1"
-      />
-  
-    </div>
-</section>
 
-  <Nav />
-  <main class="w-full mx-auto items-start">
+  <main class="w-auto mx-auto">
   
     <slot />
   </main>

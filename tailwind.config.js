@@ -28,6 +28,7 @@ module.exports = {
       fontFamily: {
         sans: ["Inter", "sans-serif"],
         lyrics: ["Garamond", "serif"],
+        garamond: ["Garamond", "serif"],
       },
       boxShadow: {
         moonglow: `

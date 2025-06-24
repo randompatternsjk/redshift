@@ -1,20 +1,20 @@
 ---
 const currentPath = Astro.url.pathname;
-export const hydrate = "load"; // Hydrate the Nav component on page load
+import '../styles/global.css';
 ---
 
-<section class="w-screen relative content-center">
-  <div class="flex justify-center space-x-4 mb-16">
-    <a href="/" class={`btn ${currentPath === '/' ? 'underline' : ''}`}>Home</a>
-    <a href="/listen/" class={`btn ${currentPath === '/listen/' ? 'underline' : ''}`}>Listen</a>
-    <a href="/lyrics/" class={`btn ${currentPath === '/lyrics/' ? 'underline' : ''}`}>Lyrics</a>
-    <a href="/credits/" class={`btn ${currentPath === '/credits/' ? 'underline' : ''}`}>Credits</a>
+<section class="w-screen relative content-center mt-4">
+  <div class="flex justify-center space-x-8">
+    
+    <a href="/listen/" class={`nav ${currentPath === '/listen/' ? 'underline' : ''}`}>Listen</a>
+    <a href="/lyrics/" class={`nav ${currentPath === '/lyrics/' ? 'underline' : ''}`}>Lyrics</a>
+    <a href="/credits/" class={`nav ${currentPath === '/credits/' ? 'underline' : ''}`}>Credits</a>
   </div>
 </section>
 
 <style>
-  .btn {
-    @apply text-white text-sm font-bold uppercase px-4 py-2 transition;
+  .nav {
+    @apply text-moonsilver text-sm font-bold uppercase transition ease-in-out hover:text-white hover:duration-300;
   }
 
   .underline {

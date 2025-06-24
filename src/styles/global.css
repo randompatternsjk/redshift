@@ -9,7 +9,3 @@ lyrics {
 lyrics .h1 {
   @apply text-black font-lyrics font-bold text-3xl mb-4;
 }
-
-.btn {
-  @apply text-dark text-sm font-black font-sans uppercase rounded-none hover:shadow-moonglow transition duration-300 px-4 py-2 m-1;
-}
