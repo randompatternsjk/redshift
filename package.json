@@ -1,34 +1,21 @@
 {
-  "name": "redshift",
-  "type": "module",
-  "version": "0.0.1",
+  "name": "the-okay-lakes",
+  "version": "1.0.0",
+  "main": "index.js",
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
-    "deploy": "gh-pages -d dist",
-    "preview": "astro preview",
-    "astro": "astro"
+    "preview": "astro preview"
   },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
   "dependencies": {
     "@astrojs/mdx": "^4.3.0",
     "@astrojs/tailwind": "^6.0.2",
-    "@astrojs/vercel": "^8.0.4",
+    "@astrojs/vercel": "^8.2.0",
     "@tailwindcss/typography": "^0.5.16",
-    "@tryghost/content-api": "^1.11.25",
-    "astro": "^5.10.1",
-    "path-to-regexp": "^8.2.0",
-    "react": "^19.1.0",
-    "react-dom": "^19.1.0",
-    "react-router-dom": "^7.5.3"
-  },
-  "devDependencies": {
-    "autoprefixer": "^10.4.21",
-    "gh-pages": "^6.3.0",
-    "postcss": "^8.5.3",
-    "prettier": "^3.5.3",
-    "prettier-plugin-astro": "^0.14.1"
-  },
-  "resolutions": {
-    "path-to-regexp": "^8.2.0"
+    "astro": "^5.10.1"
   }
 }
