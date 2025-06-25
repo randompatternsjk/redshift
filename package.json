@@ -12,10 +12,10 @@
   "dependencies": {
     "@astrojs/mdx": "^4.3.0",
     "@astrojs/tailwind": "^6.0.2",
-    "@astrojs/vercel": "^8.2.0",
+    "@astrojs/vercel": "^8.0.4",
     "@tailwindcss/typography": "^0.5.16",
     "@tryghost/content-api": "^1.11.25",
-    "astro": "^5.9.1",
+    "astro": "^5.10.1",
     "path-to-regexp": "^8.2.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
@@ -27,5 +27,8 @@
     "postcss": "^8.5.3",
     "prettier": "^3.5.3",
     "prettier-plugin-astro": "^0.14.1"
+  },
+  "resolutions": {
+    "path-to-regexp": "^8.2.0"
   }
 }
