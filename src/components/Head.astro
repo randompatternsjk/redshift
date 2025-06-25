@@ -2,11 +2,14 @@
 import { ClientRouter } from "astro:transitions";
 import Nav from "./Nav.astro";
 ---
+<link rel="stylesheet" href="../styles/global.css" />
 <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 <meta name="generator" content={Astro.generator} />
-
-<Nav />
 <ClientRouter />
+<Nav />
+
+<meta name="astro-view-transitions-enabled" content="true" />
+<meta name="astro-view-transitions-fallback" content="animate" />
 
 <section class="content-center my-8">
     <div class="flex flex-col justify-start max-w-md min-w-md mx-auto my-auto gap-4">
