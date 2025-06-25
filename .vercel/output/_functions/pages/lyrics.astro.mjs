@@ -278,7 +278,7 @@ async function renderEntry(entry) {
   }
   if (entry.deferredRender) {
     try {
-      const { default: contentModules } = await import('../chunks/content-modules_CHaoyGro.mjs');
+      const { default: contentModules } = await import('../chunks/content-modules_DJaKyolX.mjs');
       const renderEntryImport = contentModules.get(entry.filePath);
       return render({
         collection: "",
