@@ -1,7 +1,6 @@
 import { defineConfig } from "astro/config";
 import tailwind from "@astrojs/tailwind";
 import mdx from "@astrojs/mdx";
-
 import vercel from "@astrojs/vercel";
 
 export default defineConfig({
@@ -12,6 +11,5 @@ export default defineConfig({
   //   site: "https://www.theokaylakes.com", // Use your custom domain if it's properly configured
   // },
   output: "static",
-
   adapter: vercel(),
 });
