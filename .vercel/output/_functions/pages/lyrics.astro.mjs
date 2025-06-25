@@ -218,7 +218,7 @@ const CONTENT_LAYER_IMAGE_REGEX = /__ASTRO_IMAGE_="([^"]+)"/g;
 async function updateImageReferencesInBody(html, fileName) {
   const { default: imageAssetMap } = await import('../chunks/content-assets_DleWbedO.mjs');
   const imageObjects = /* @__PURE__ */ new Map();
-  const { getImage } = await import('../chunks/_astro_assets_XdSf5cd3.mjs').then(n => n._);
+  const { getImage } = await import('../chunks/_astro_assets_CUphy1zJ.mjs').then(n => n._);
   for (const [_full, imagePath] of html.matchAll(CONTENT_LAYER_IMAGE_REGEX)) {
     try {
       const decodedImagePath = JSON.parse(imagePath.replaceAll("&#x22;", '"'));
@@ -278,7 +278,7 @@ async function renderEntry(entry) {
   }
   if (entry.deferredRender) {
     try {
-      const { default: contentModules } = await import('../chunks/content-modules_DBTBPptv.mjs');
+      const { default: contentModules } = await import('../chunks/content-modules_CHaoyGro.mjs');
       const renderEntryImport = contentModules.get(entry.filePath);
       return render({
         collection: "",
