@@ -2,9 +2,6 @@
 	"version": 3,
 	"routes": [
 		{
-			"handle": "filesystem"
-		},
-		{
 			"src": "^/_astro/(.*)$",
 			"headers": {
 				"cache-control": "public, max-age=31536000, immutable"
@@ -12,35 +9,38 @@
 			"continue": true
 		},
 		{
-			"src": "^/_server-islands/([^/]+?)/?$",
+			"handle": "filesystem"
+		},
+		{
+			"src": "^\\/_server-islands\\/([^/]+?)\\/?$",
 			"dest": "_render"
 		},
 		{
-			"src": "^/_image/?$",
+			"src": "^\\/_image\\/?$",
 			"dest": "_render"
 		},
 		{
-			"src": "^/credits/?$",
+			"src": "^\\/credits\\/?$",
 			"dest": "_render"
 		},
 		{
-			"src": "^/landing/Hero/?$",
+			"src": "^\\/landing\\/Hero\\/?$",
 			"dest": "_render"
 		},
 		{
-			"src": "^/landing/?$",
+			"src": "^\\/landing\\/?$",
 			"dest": "_render"
 		},
 		{
-			"src": "^/listen/?$",
+			"src": "^\\/listen\\/?$",
 			"dest": "_render"
 		},
 		{
-			"src": "^/lyrics/?$",
+			"src": "^\\/lyrics\\/?$",
 			"dest": "_render"
 		},
 		{
-			"src": "^/$",
+			"src": "^\\/$",
 			"dest": "_render"
 		}
 	]
