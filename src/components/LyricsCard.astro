@@ -1,21 +1,16 @@
 ---
-import { getCollection } from "astro:content";
-const songs = (await getCollection("lyrics")).sort((a: { data: { track: number; }; }, b: { data: { track: number; }; }) => a.data.track - b.data.track); // Fetch all lyrics posts and sort by track number
-
+const { songs } = Astro.props; // Accept preloaded songs data as a prop
 ---
-
 <div class="songs-grid grid lg:grid-cols-3 sm:grid-cols-1 md:grid-cols-1 gap-4 items-start">
-    {songs.map((song: { data: { image: string | null | undefined; title: unknown; }; body: unknown; }) => (
-      <article class="song-card bg-card-bg p-4 ml-4flex flex-col items-start justify-center transition-transform duration-200 ease-in-out">
-        <img 
-          src={song.data.image} 
-          alt={`${song.data.title} album art`}
-          class="w-full h-auto object-cover"
-        />
-        <h2 class="text-left text-dark font-bold mt-4">{song.data.title}</h2>
-       
-        <div class="lyrics-body text-justify text-dark text-sm mt-4 text-wrap whitespace-pre">{song.body}
-        </div>
-      </article>
-    ))}
-  </div>
+  {songs.map((song) => (
+    <article class="song-card bg-card-bg p-4 flex flex-col items-start justify-center transition-transform duration-200 ease-in-out">
+      <img 
+        src={song.data.image} 
+        alt={`${song.data.title} album art`}
+        class="w-full h-auto object-cover"
+      />
+      <h2 class="text-left text-dark font-bold mt-4">{song.data.title}</h2>
+      <div class="lyrics-body text-justify text-dark text-sm mt-4 text-wrap whitespace-pre">{song.body}</div>
+    </article>
+  ))}
+</div>

@@ -1,5 +1,4 @@
 ---
-// MainLayout.astro
 import '../styles/global.css';
 import { ClientRouter } from 'astro:transitions';
 ---
@@ -8,20 +7,20 @@ import { ClientRouter } from 'astro:transitions';
 <html lang="en">
 <head>
   <ClientRouter />
-  <link rel="stylesheet" href="../styles/global.css" />
-  <link rel="preload" href="/images/layout_bg.jpg" as="image">
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Redshift - The Okay Lakes</title>
+  <link rel="stylesheet" href="/styles/global.css" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="generator" content="Astro v5.10.1" />
+  <meta name="astro-view-transitions-enabled" content="true" />
+  <meta name="astro-view-transitions-fallback" content="animate" />
+  <title><slot name="title" /></title>
 </head>
 <body class="min-h-screen relative bg-black">
   <div 
     class="fixed inset-0 -z-10 bg-cover bg-center opacity-70"
     style="background-image: url('/images/layout_bg.jpg');"
   ></div>
-
-  <main class="w-auto mx-auto" transition:animate="fade">
-  
+  <main class="w-auto mx-auto">
     <slot />
   </main>
 </body>
