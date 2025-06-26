@@ -7,7 +7,8 @@ import { ClientRouter } from 'astro:transitions';
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <ClientRouter>
+  <ClientRouter />
+  <link rel="stylesheet" href="../styles/global.css" />
   <link rel="preload" href="/images/layout_bg.jpg" as="image">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,7 +20,7 @@ import { ClientRouter } from 'astro:transitions';
     style="background-image: url('/images/layout_bg.jpg');"
   ></div>
 
-  <main class="w-auto mx-auto">
+  <main class="w-auto mx-auto" transition:animate="fade">
   
     <slot />
   </main>

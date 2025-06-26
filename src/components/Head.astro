@@ -4,6 +4,7 @@ import Nav from "./Nav.astro";
 ---
 <link rel="stylesheet" href="../styles/global.css" />
 <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="generator" content={Astro.generator} />
 <ClientRouter />
 <Nav />
@@ -11,17 +12,23 @@ import Nav from "./Nav.astro";
 <meta name="astro-view-transitions-enabled" content="true" />
 <meta name="astro-view-transitions-fallback" content="animate" />
 
-<section class="content-center my-8">
-    <div class="flex flex-col justify-start max-w-md min-w-md mx-auto my-auto gap-4">
+<section class="content-center my-12">
+    <div class="flex flex-col justify-start w-full max-w-md mx-auto my-auto gap-4">
         <img
           src="/svgs/theokaylakes.svg"
           alt="The Okay Lakes Logo"
-          class="object-contain flex-1 mx-auto"
+          width="300"
+          height="80"
+          class="object-contain w-full max-w-[400px] mx-auto"
+          loading="eager"
         />
         <img
           src="/svgs/redshift.svg"
           alt="Redshift Logo"
-          class="mx-auto object-contain flex-1"
+          width="400"
+          height="80"
+          class="object-contain w-full max-w-[400px] mx-auto"
+          loading="eager"
         />
     </div>
 </section>
